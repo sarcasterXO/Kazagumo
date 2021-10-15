@@ -69,7 +69,9 @@ class kazagumoTrack {
      */
     async resolve(overwrite, forceResolve) {
         const resolveSource = !!this.kazagumo._kazagumoOptions?.resolveSource?.includes(this.sourceName);
-        if (!forceResolve && this.checkValidation()) return this;
+        if (!forceResolve && this.track &&
+            this.sourceName && this.identifier && this.author &&
+            this.length && this.title && this.uri && this.realUri) return this;
         if (resolveSource && this.resolvedBySource) return this;
         if (resolveSource) this.resolvedBySource = true;
 
@@ -134,22 +136,6 @@ class kazagumoTrack {
      */
     checkSupportedSource() {
         return supportedSources.includes(this.sourceName);
-    }
-
-    /**
-     * Validate if we need to resolve again or not
-     * @private
-     * @returns {*}
-     */
-    checkValidation() {
-        return this.track &&
-            this.sourceName &&
-            this.identifier &&
-            this.author &&
-            this.length &&
-            this.title &&
-            this.uri &&
-            this.realUri
     }
 }
 
