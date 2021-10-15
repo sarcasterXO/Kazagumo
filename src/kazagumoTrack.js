@@ -44,7 +44,7 @@ class kazagumoTrack {
         this.thumbnail = kazagumoRawTrack.info.thumbnail;
         this.title = kazagumoRawTrack.info.title;
         this.uri = kazagumoRawTrack.info.uri;
-        this.realUri = this.checkSupportedSource() ? kazagumoRawTrack.info.uri : null;
+        this.realUri = supportedSources.includes(this.sourceName) ? kazagumoRawTrack.info.uri : null;
         this.requester = requester || null;
 
         if (!this.thumbnail && this.sourceName === "youtube")
@@ -127,15 +127,6 @@ class kazagumoTrack {
     setRequester(discordUser) {
         this.requester = discordUser;
         return this;
-    }
-
-    /**
-     * Check if the track's source is internally supported by lavalink to prevent multiple track resolving
-     * @returns {boolean}
-     * @private
-     */
-    checkSupportedSource() {
-        return supportedSources.includes(this.sourceName);
     }
 }
 
