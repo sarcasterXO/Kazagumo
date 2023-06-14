@@ -43,6 +43,7 @@ export const SourceIDs = {
   youtube: 'yt',
   youtube_music: 'ytm',
   soundcloud: 'sc',
+  deezer: 'dzsearch',
 };
 
 export interface KazagumoPlayerOptions {
