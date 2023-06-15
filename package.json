@@ -21,7 +21,7 @@
     "lint": "tslint -p tsconfig.json",
     "build:docs": "typedoc --readme README.md --out docs/ --entryPointStrategy expand src/.",
     "prepare": "npm run build",
-    "postinstall": "npm install && npm run build"
+    "postinstall": "yarn install && yarn build"
   },
   "keywords": [
     "lavalink",
