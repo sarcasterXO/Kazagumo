@@ -232,9 +232,10 @@ player.play(convertedTrack);
 
 > - Deivu as the owner of Shoukaku  
 >   &nbsp;&nbsp;&nbsp;&nbsp; Github: https://github.com/Deivu  
->   &nbsp;
+
 > - Takiyo as the owner of this project  
 >   &nbsp;&nbsp;&nbsp;&nbsp; Github: https://github.com/Takiyo0
->   &nbsp;
+
 > - Sarcaster as a active contributor of this project  
 >   &nbsp;&nbsp;&nbsp;&nbsp; Github: https://github.com/sarcasterXO
+

@@ -1,6 +1,6 @@
 {
   "name": "kazagumo",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "A shoukaku wrapper with built-in queue support.",
   "main": "dist/Index.js",
   "types": "dist/Index.d.ts",
@@ -19,7 +19,8 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "build:docs": "typedoc --readme README.md --out docs/ --entryPointStrategy expand src/."
+    "build:docs": "typedoc --readme README.md --out docs/ --entryPointStrategy expand src/.",
+    "prepare": "npm run build"
   },
   "keywords": [
     "lavalink",
@@ -31,6 +32,9 @@
     "discord-player"
   ],
   "author": "Takiyo",
+  "contributors": [
+    "Sarcaster <sarcasteryt@gmail.com>"
+  ],
   "files": [
     "dist/**/**/*"
   ],
